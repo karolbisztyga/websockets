@@ -7,9 +7,13 @@
         }
     ],
     "require": {
-        "symfony/yaml": "^2.7"
+        "symfony/yaml": "^2.7",
+        "doctrine/orm": "*"
     },
 	"autoload": {
-        "psr-4": {"WebSockets\\": "src/WebSockets"}
+        "psr-4": {
+            "WebSockets\\": "src/WebSockets",
+            "Entity\\": "src/Database/Entity"
+        }
     }
 }
