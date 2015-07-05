@@ -13,7 +13,7 @@
 	"autoload": {
         "psr-4": {
             "WebSockets\\": "src/WebSockets",
-            "Entity\\": "src/Database/Entity"
+            "Database\\": "src/Database"
         }
     }
 }

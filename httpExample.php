@@ -1,9 +1,10 @@
 <?php
 
 	require_once __DIR__ . "/vendor/autoload.php" ;
-	//require_once __DIR__ . "/databaseInit.php";
 
 	use WebSockets\Http\Server;
+	use Database\Entity\Users;
+	use Database\Config\DatabaseConfig;
 
 	set_time_limit(0);
 
@@ -55,4 +56,15 @@
 
 	}
 
+	/* *
+	$em = (new Database\Config\DatabaseConfig())->getManager();
+	$repo = $em->getRepository('Database\Entity\Users');
+	$user = $repo->findBy(array('name'=>'test'));
+	$u = new Users();
+	var_dump($user);
+
+	echo "\n";
+
+	exit;
+	/* */
 	(new ServerImplementation())->run();
